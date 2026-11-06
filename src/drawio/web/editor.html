@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Draw.io 画布</title>
+  <link rel="icon" href="__DRAWIO_BASE__assets/favicon.ico">
+  <style>
+    body { margin: 0; min-height: 100dvh; display: flex; flex-direction: column; font: 14px system-ui, sans-serif; }
+    header { padding: 10px 14px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; background: #f4f6fa; }
+    button { cursor: pointer; padding: 4px 10px; }
+    button:disabled { cursor: default; }
+    iframe { flex: 1; width: 100%; min-height: 65vh; border: 0; }
+    #status { margin-inline-start: 4px; }
+  </style>
+  <script src="__DRAWIO_BASE__editor.js" defer></script>
+</head>
+<body data-base="__DRAWIO_BASE__">
+  <header>
+    <strong>Draw.io 画布</strong>
+    <button id="create" hidden>新建画布</button>
+    <button id="import" disabled>导入 .drawio</button>
+    <input id="file" type="file" accept=".drawio,.xml,application/xml,text/xml" hidden>
+    <button id="save" disabled>保存</button>
+    <button id="drawio" disabled>下载 .drawio</button>
+    <button id="png" disabled>导出 PNG</button>
+    <button id="svg" disabled>导出 SVG</button>
+    <button id="reload" hidden>加载服务器版本</button>
+    <span id="status" role="status" aria-live="polite"></span>
+  </header>
+  <iframe id="editor" title="Draw.io 编辑器" referrerpolicy="no-referrer" hidden></iframe>
+</body>
+</html>
