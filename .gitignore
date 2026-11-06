@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+.drawio-cache/
+/drawio-server-2026-11.bundle
